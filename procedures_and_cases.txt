@@ -132,7 +132,7 @@
             * TEMPLATES = [
                   {
                       'BACKEND': "....",
-                      'DIRS': [ os.path.join(BASE_DIR, "static") ],
+                      'DIRS': [ os.path.join(BASE_DIR, "templates") ],
                       ..........
                   },
               ]
