@@ -34,3 +34,8 @@
     -> add 'django' into the requirements.txt file
     -> in the virtual environment write the 'install command' 
         * 'pip install -r requirements.txt'
+
+## Create 'django project'
+    -> type "django-admin startproject <app-name>
+        * "django-admin startproject basic_app"
+    
