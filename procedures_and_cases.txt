@@ -174,4 +174,10 @@
         - "Hello World!" will be shown 
     -> from 'components-> Navbar':
         - paste the navbar code inside <body> section 
+    -> Change the Names of the different nav-items
+        - from 'Link' to 'About us' or, from 'Dropdown' to 'Services'
+    -> set the end points 
+        - href="#' to href"/", or href="/contact"
+    -> change the theme:
+        - from 'light' to 'dark'
     
