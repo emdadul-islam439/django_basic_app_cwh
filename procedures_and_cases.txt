@@ -65,3 +65,8 @@
     -> write 'startapp' command
         * python manage.py startapp basic_app
     -> That's it!
+
+## Create 'urls.py' in the basic_app:
+    -> create 'urls.py' 
+    -> copy the codes of 'basic_project/urls.py'
+    -> paste the codes into the 'basic_app/urls.py'
