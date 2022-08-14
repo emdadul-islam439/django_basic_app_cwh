@@ -143,4 +143,26 @@
 
     -> inside the 'templates' folder, you will generally add different .html, .js- type files 
         - create a file named 'index.html' and add some code in it. Save it.
-        - 
+        - use "return render(request, "index.html")" instead of "return HttpResponse("This is HOME page")"
+
+
+## sending 'data' into templates files 
+    -> define a dictionary.
+        * context = {
+            "variable_1": "This is variable 1",
+            "variable_2": "This is variable 2"
+          }
+    -> pass the dictionary to 'render(....)' function
+        * return render(request, "index.html", context)
+
+    -> in the "index.html" file access the passed key:
+        * {{variable_1}}
+        * <b> {{variabel_2}} </b>
+        - Example: 
+            * <p>
+                <b>variable_1 = {{variable_1}}</b>
+                <br/>
+                <b>variable_2 = {{variable_2}}</b>
+                <br/>
+              </p>
+    
