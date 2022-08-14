@@ -38,4 +38,14 @@
 ## Create 'django project'
     -> type "django-admin startproject <app-name>
         * "django-admin startproject basic_app"
-    
+
+## Start Django Server:
+    -> if you are in the parent folder go to the 'project' folder  
+        - go to 'basic_app' from '01_django_basic_app_cwh'
+            * cd basic_app
+    -> run the 'runserver' command
+        * python manage.py runserver
+        - server will be opened in "127.0.0.1:8000" link 
+    -> there can be an error -> "You have 18 unapplied migration(s). Your project may not work properly..."
+        - write the command, and the warning will not be shown again
+            * python manage.py migrate
