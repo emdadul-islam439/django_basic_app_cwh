@@ -180,4 +180,28 @@
         - href="#' to href"/", or href="/contact"
     -> change the theme:
         - from 'light' to 'dark'
+
+
+## "Migrating": Beginning:
+    -> first check if any migrations is pending now
+        * "python manage.py makemigrations"
+        - if nothing is pending, then show 
+            -> "No changes detected"
+        - else it will show some/one 'pending change' related file-name 
+    
+    -> write code to 'migrate'
+        * "python manage.py migrate"
+        - if this is the first time, these line will be shown
+            * Operations to perform:
+              Apply all migrations: admin, auth, contenttypes, sessions.....
+
+
+## Creating "SuperUser":
+    -> write:
+        * python manage.py createsuperuser
+    -> Give the user-name/passwords
+    -> That's it!
+
+
+    
     
