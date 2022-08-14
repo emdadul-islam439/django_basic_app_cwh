@@ -167,4 +167,11 @@
               </p>
 
 
+
+## Adding HTML ELEMENTS from Bootstrap:
+    -> from "https://getbootstrap.com/docs/4.4/getting-started/introduction/"
+        - copy-paste the 'starter code' into 'index.html' file 
+        - "Hello World!" will be shown 
+    -> from 'components-> Navbar':
+        - paste the navbar code inside <body> section 
     
