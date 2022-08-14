@@ -49,3 +49,11 @@
     -> there can be an error -> "You have 18 unapplied migration(s). Your project may not work properly..."
         - write the command, and the warning will not be shown again
             * python manage.py migrate
+
+
+## Rename Project:
+    -> Source: https://stackoverflow.com/a/67640413
+    -> replace all the <old-project-name> into <new-project-name>
+        - replace the directory (folders) name 
+        - replace from all the project's files 
+    -> [TRICK] just find-replace the old-name into new-name, where-ever you find the old-name. That's it!
