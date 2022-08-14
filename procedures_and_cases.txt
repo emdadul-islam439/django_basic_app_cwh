@@ -209,6 +209,36 @@
         * admin.site.site_header = "UMSRA Admin"
           admin.site.site_title = "UMSRA Admin Portal"
           admin.site.index_title = "Welcome to UMSRA Researcher Portal"
-          
+
         - change the values as your wish
+
+## Using TEMPLATES:
+    -> make a file named 'base.html' and CUT-paste all codes from 'index.html
+    -> in the 'base.html' file
+        - below 'Navbar' section, create a BLOCK named 'body'
+            * {% block body %}{% endblock body %}
+            - if you type 'block' then the suggession will come 
+        - inside <title>, create another BLOCK named 'title'
+            * {% block title %}{% endblock title %}
+    -> in the EMPTY 'index.html' file, write these lines
+        * {% extends 'base.html' %}
+        *
+        * {% block title %}Home{% endblock title %}
+        *
+        * {% block body %}This is HOME page{% endblock body %}
+    
+    -> codes of the 'index.html' file will be replaced into base.html file's written blocks 
+
+## making and assigning other pages' files 
+    -> inside 'templates/' folder:
+        - create 'about.html', 'services.html' and 'contact.html' file 
+        - copy paste the BLOCKS from 'index.html' 
+        - slightly modify the texts
+            -> change 'Home' into 'About Us'
+        - That's it!
+    
+    -> assign the files into 'basic_app/views.py'
+        - write this line inside 'def about(..)':
+            * return render(request, "about.html") 
+        - assign "services.html" and "contact.html" inside their relative functions 
     

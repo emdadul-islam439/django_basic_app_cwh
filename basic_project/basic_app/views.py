@@ -11,8 +11,8 @@ def index(request):
     # return HttpResponse("This is HOME page")
     
 def about(request):
-    return HttpResponse("This is ABOUT page")
+    return render(request, "about.html")
 def services(request):
-    return HttpResponse("This is SERVICES page")
+    return render(request, "services.html")
 def contact(request):
-    return HttpResponse("This is CONTACT page")
+    return render(request, "contact.html")
