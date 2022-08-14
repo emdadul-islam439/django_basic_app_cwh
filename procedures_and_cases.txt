@@ -70,3 +70,29 @@
     -> create 'urls.py' 
     -> copy the codes of 'basic_project/urls.py'
     -> paste the codes into the 'basic_app/urls.py'
+
+## Defining "path-variables":
+    -> first all the request comes to the 'basic_project/urls.py' file 
+    -> then it can be directly send the user to a page
+        OR, it will send the request to the 'basic_app/urls.py' file 
+        - "/admin" path will be directly redirected to the "admin.site.urls"
+        - "" can be redirect to the "basic_app/urls.py"
+            * urlpatterns = [
+            *    path('admin/', admin.site.urls),
+            *    path("", include('basic_app.urls'))
+            * ]
+    
+    -> 'basic_app/urls.py' generally redirect links to 'basic_app/views.py'
+        * from basic_app import views
+
+        * urlpatterns = [
+        *    path("", views.index, name = "home")
+        * ]
+
+    -> 'basic_app/view.py' generally have different function with 'end-points'
+        * from django.shortcuts import render, HttpResponse
+
+        * def index(request):
+        *    return HttpResponse("This is HOME PAGE")
+
+    -> 
