@@ -1,0 +1,1 @@
+This is an example .txt file.... you can add different types of 'static' files inside the 'static' folder.

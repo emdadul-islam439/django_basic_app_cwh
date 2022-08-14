@@ -117,3 +117,17 @@
     
     *** QUESTION:
         ** Why we've not added any code into 'basic_project/urls.py', and the server given expected-output?
+
+
+## adding 'static' and 'templates' files:
+    -> create two directories exactly inside '01_django_basic_app_cwh/basic_project/basic_project' folder
+        - create 'static' and 'templates' directory
+        - inside 'basic_projects/settings.py' add this:
+            * # manually added
+              STATICFILES_DIRS = [
+                  os.path.join(BASE_DIR, "static")
+              ]
+    -> inside the 'static' folder you can add different files like-> .txt, .mp4, .html, etc.
+        - create a file named 'test.txt' and write something into this. Save it.
+        - go to "127.0.0.1:8000/static/test.txt" link
+        - you will see the writings inside the file in the browser 
