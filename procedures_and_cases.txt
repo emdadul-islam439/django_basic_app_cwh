@@ -318,3 +318,16 @@
             -> "Name: [ Emdadul Islam ] - Desc: [ my comment ]"
         - instead of:
             -> "Custom Object(1)"
+
+
+## Show 'success' message:
+    -> after successfully submit data, show the 'success' message 
+        - in the 'basic_app/views.py' import 'django messages'
+        * "from django.contrib import messages"
+        - send success message:
+            -Example:
+            * def contact(request):
+            *    if request.method == 'POST':
+            *        ......
+            *        messages.success(request, "Your message has been sent successfully!")
+            *   return .....
