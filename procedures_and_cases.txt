@@ -331,3 +331,25 @@
             *        ......
             *        messages.success(request, "Your message has been sent successfully!")
             *   return .....
+
+
+## Doing things in SHELL:
+    -> in terminal write:
+        * "python manage.py shell"
+        - python interpreter will start 
+        - you can write codes:
+        - Example:
+            * from basic_app.models import Contact
+
+            * Contact.objects.all()
+            * Contact.objects.all()[1]
+            * Contact.objects.filter(name = "my name")
+
+            * var = Contact.objects.filter(name = "my name")[0]
+            * var.name = "my name changed"
+            * var.save()
+        
+    -> can be practiced the queries from:
+        - Source: "https://docs.djangoproject.com/en/4.1/topics/db/queries/"
+    
+    -> type "exit()" if you want to exit from the 
