@@ -241,4 +241,30 @@
         - write this line inside 'def about(..)':
             * return render(request, "about.html") 
         - assign "services.html" and "contact.html" inside their relative functions 
-    
+
+## Design The webpages:
+    ---> For index.html Do this: 
+    -> copy-paste- corousel
+        - go to "https://getbootstrap.com/docs/4.4/components/carousel/#with-captions"
+        - copy-paste the 'with caption' corousel
+    -> copy-paste- Album
+        - go to "https://getbootstrap.com/docs/4.4/examples/album/"
+        - copy-paste the album section's code below corousel
+    -> get photoes from UNSPLASH.COM 
+        - use "https://source.unsplash.com/<width>x<height>/?<tag-1>,<tag-2>,.." to get photoes
+        - Example: "https://source.unsplash.com/1200x900/?library,novel"
+        * <img src="https://source.unsplash.com/1200x900/?library,novel" class="d-block w-100" alt="...">
+    - That's it!
+
+    ---> For contact.html, Do this:
+    -> add image from unsplash
+    -> add a form from the 'getbootstrap.com'
+    -> add a inside the form
+    -> add a 'csrf_token' field
+        - write 'csrf' and suggession will come 
+        - Example: 
+        * <form ...>
+        *   {% csrf_token %}
+        *   ....
+        * </form>
+        -
