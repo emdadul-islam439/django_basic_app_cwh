@@ -306,3 +306,15 @@
     
     -> Go to the "127.0.0.1:8000/admin":
         - see a table named "Contact" is showing up 
+
+
+## Showing our 'string' replacing "Custom Object(..)":
+    -> just return our string into the "__str__" function.
+        - Example: 
+        * def __str__(self) -> str:
+            return f"Name: [ {self.name} ] -    Desc: [ {self.desc} ]"
+    -> now go to "http://127.0.0.1:8000/admin/basic_app/contact/"
+        - you will see:
+            -> "Name: [ Emdadul Islam ] - Desc: [ my comment ]"
+        - instead of:
+            -> "Custom Object(1)"
