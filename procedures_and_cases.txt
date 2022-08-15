@@ -267,4 +267,42 @@
         *   {% csrf_token %}
         *   ....
         * </form>
-        -
+
+
+## Create Models:
+    -> in the 'basic_app/models.py':
+        - create a class 'Contact' and define all the fields 
+        - Example: 
+        * # Create your models here.
+        * class Contact(models.Model):
+        *     name = models.CharField(max_length=100)
+        *     email = models.CharField(max_length=100)
+        *     phone = models.CharField(max_length=20)
+        *     desc = models.TimeField()
+        *     date = models.DateField() 
+    
+## FOR MIGRATION:
+    -> REGISTER 'basic_app' and 'Contact'
+        - in 'basic_app/admin.py' register the 'Contact' class 
+            * admin.site.register(Contact)
+        - in 'basic_project/settings.py' register 'basic_app'
+            - from 'basic_app/apps.py' copy the class-name 'BasicAppConfig'
+            - write this line inside 'INSTALLED_APPS' list (have to be string and put a comma after that)
+            * INSTALLED_APPS = [
+                  'basic_app.apps.BasicAppConfig',
+                  '......
+              ]
+    -> write commands for migration:
+        - write: "python manage.py makemigrations"
+            - OUTPUT: Migrations for 'basic_app':
+                        basic_app/migrations/0001_initial.py
+                            - Create model Contact
+        
+        - then, write "python manage.py migrate"
+            - OUTPUT: Operations to perform:
+                        Apply all migrations: admin, auth, basic_app, contenttypes, sessions
+                      Running migrations:
+                        Applying basic_app.0001_initial... OK
+    
+    -> Go to the "127.0.0.1:8000/admin":
+        - see a table named "Contact" is showing up 
